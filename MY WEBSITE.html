@@ -1,0 +1,196 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my box</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family:'Times New Roman', Times, serif;
+            padding: 10px;
+            background: blue;
+        }
+  
+        /*Header/Blog Title*/
+        .header{
+            padding: 30px;
+            text-align: center;
+            background: rgb(255, 255, 255);
+        }
+         h1{
+            position: relative;
+            font-size: 5vw;
+            color: #252839;
+            -webkit-text-stroke: 0.3vw #383d52;
+            text-transform: uppercase;
+            border-right: 2px solid #01fe87;
+        }
+        /*Style the top navigation bar*/
+      .topnav{
+          overflow: hidden;
+          background-color: #f90101;
+      }
+      /*style the topnav links*/
+      .topnav a{
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 25px;
+            text-decoration: none;
+        }
+        /*change color on hover*/
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        /*create two unequal colums that float next too each other*/
+        /*left column*/
+        .leftcolumn{
+            float: left;
+            width: 75%;
+        }
+        /*right column*/
+        .rightcolumn{
+            float: left;
+            width: 25%;
+            background-color:brown;
+            padding-left: 20px;
+        }
+        /*fake image*/
+        .fakeimg {
+            background-color:rgb(0, 255, 255);
+            width: 100%;
+            padding: 5px;
+            margin: 2px;
+        }
+        /*Add a card effect for articles*/
+        .card {
+            background-color: rgb(3, 255, 125);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .card h2 {
+            color: #dc06b5;
+            text-align: center;
+        }
+        /*clear floats after the columns*/
+        .row::after{
+            content:"";
+            display: table;
+            clear: both;
+        }
+        /*footer*/
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background:#000738;
+            margin-top: 20px;
+        }
+        .footer h2 {
+            color: #f90101;
+        }
+        /*responsive layout-when the screen is less than 800px wide, make the two columns
+        stack on top of each other instead of next to each other*/
+        @media screen and(max-width: 800px;){
+            .leftcolumn,.rightcolumn{
+                width: 100%;
+                padding: 0;
+            }
+        }
+        /*responsive layout-when the screen is less than 400px wide, make the navigation links
+        stack on top of each other instead of next to each other*/
+        @media screen and(max-width: 400px;){
+            .topnav a{
+                float: none;
+                width: 100%;
+            }
+        }
+        img {
+            width: 100%;
+            padding-top: 20;
+            height: 60px;
+            margin-top: 5px;
+        }
+        .img1 {
+            width: 100%;
+            padding-top: 20;
+            height: 170px;
+            margin-top: 5px;
+        }
+        .img2 {
+            width: 100%;
+            padding-top: 20;
+            height: 170px;
+            margin-top: 5px;
+        }
+        .card h3 {
+            color:rgb(83, 4, 136);
+        }
+        .card p1 {
+            color: #0b1c7b;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>WELCOME TO MY WEBSITE</h1>
+        <p>THERE IS WHAT YOU ARE INTERSTING..</p>
+    <div class="topnav">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SERVICES</a>
+        <a href="#">SERVICES</a>
+        <a href="#" >SERVICES</a>
+        <a href="#" >FOLLOW ME</a>
+    </div>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>JAVA SCRIPT LANGUAGE</h2>
+                <h5>First appeared: December 4, 1995; 27 years ago
+                    Paradigm: Multi-paradigm: event-driven, functional, imperative, procedural, object-oriented programming
+                    Preview release: ECMAScript 2022 / 22 July 2021; 22 months ago</h5>
+                <div class="fakeimg" style="height: 200px;"><img class="img1" src="my image/download (2).png" alt=""></div>
+                <p1>WHAT IS JAVA SCRIPT</p1>
+                <p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area.
+                </p>
+            </div>
+            <div class="card">
+                <h2>PYTHON LANGUAGE</h2>
+                <h5>Python was created by Guido van Rossum, and first released on February 20, 1991. While you may know the python as a large snake, the name of the Python programming language comes from an old BBC television comedy sketch series called Monty Python's Flying Circus.</h5>
+                <div class="fakeimg" style="height: 200px;"><img class="img2" src="my image/download (1).jpg" alt=""></div>
+                <p1>WHAT IS PYTHON</p1>
+                <p>Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general-purpose language, meaning it can be used to create a variety of different programs and isn’t specialized for any specific problems. This versatility, along with its beginner-friendliness, has made it one of the most-used programming languages today.
+
+                    Stack Overflow's 2022 Developer Survey revealed that Python is the fourth most popular programming language, with respondents saying that they use Python almost 50 percent of the time in their development work. Survey results also showed that Python is tied with Rust as the most-wanted technology, with 18% percent of developers who aren't using it already saying that they are interested in learning Python [1]
+                </p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h3>ABOUT ME</h3>
+                <div class="fakeimg" style="height: 100px;"><img  src="my image/download.jpg" alt=""></div>
+                <p>I am Student . I finished high school education and i am now in the university 
+                    at firt year. I'm interested in coding.
+                </p>
+            </div>
+            <div class="card">
+                <h3>POPULAR POSTS</h3>
+                <div class="fakeimg"><p><img src="my image/farax.jpg" alt=""></p></div>
+                <div class="fakeimg"><p><img src="my image/jk.jpg" alt=""></p></div>
+                <div class="fakeimg"><p><img src="my image/gh.jpg" alt=""></p></div>
+            </div>
+            <div class="card">
+                <h3>FOLLOW ME</h3>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>I HOPE YOU A GOOD LUCK</h2>
+    </div>
+</body>
+</html>
